@@ -146,31 +146,9 @@ hide_edge_borders none
 ################################################################
 #|||||||||||||| Ventanas flotantes con bordes |||||||||||||||||#
 for_window [class="conky"] floating enable border none
-#for_window [class="(?i)conky"] floating enable border none
-for_window [class="Galculator"] floating enable border normal
-for_window [class="Geany"] floating enable border normal
-for_window [class="GParted"] floating enable border normal
-for_window [class="JDownloader"] floating enable border normal
-for_window [class="Lightdm-gtk-greeter-settings"] floating enable border normal
-for_window [class="Lxappearance"] floating enable border normal
-for_window [class="Mousepad"] floating enable border normal
-for_window [class="Nitrogen"] floating enable border normal
-for_window [class="Pamac-update"] floating enable border normal
-for_window [class="Pavucontrol"] floating enable border normal
-for_window [class="Transmission-gtk"] floatingenable border normal
-for_window [class="(?i)virtualbox"] floating enable border normal
-
-#||||||||||||| Ventanas flotantes sin bordes ||||||||||||||||||#
-for_window [class="Firefox"] enable border pixel 1
-for_window [class="Galculator"] floating enable border pixel 4
-for_window [class="soundconverter"] floating enable border pixel 1
-for_window [class="Sonata"] floating enable border pixel 4
-for_window [class="Terminator"] floating enable border pixel 1
-for_window [class="Termite"] floating enable border pixel 4
-for_window [class="Vlc"] floating enable border pixel 1
-for_window [class="xarchiver"] floating enable border pixel 1
-for_window [class="XTerm"] floating enable border pixel 4
-################################################################
+assign [title="TrackingTime | Time Tracker"] $WS0
+assign [class="chromium-browser"] $WS1
+for_window [class="Spotify"] move to workspace $WS9
 
 #:::::::::: Posicion de ventana en esquina superior :::::::::::#
 ################################################################
@@ -223,7 +201,7 @@ bindsym $mod+r mode "resize"
 #:::::::::::::::::::::: Config del panel ::::::::::::::::::::::#
 ################################################################
 bar {
-#	id 			bar-1	
+#	id 			bar-1
 	status_command 		i3blocks -c ~/.config/i3/i3blocks.conf
 #	position 		down
 #	mode 			dock
@@ -437,8 +415,10 @@ exec octopi-notifier
 #exec setxkbmap -option 'grp:alt_shift_toggle'
 #exec "feh --bg-scale ~/wp"
 #exec "feh --bg-scale https://source.unsplash.com/random/1920x1080"
-exec "feh --bg-scale https://source.unsplash.com/category/nature/1920x1080"
-#exec "feh --bg-scale https://unsplash.it/1920/1080/?random"
-exec "chromium-browser"
-
+#exec "feh --bg-scale https://source.unsplash.com/category/nature/1920x1080"
+#exec "feh --bg-scale https://source.unsplash.com/category/computer/1920x1080"
+exec "feh --bg-scale https://source.unsplash.com/1920x1080/?computer"
+exec /usr/bin/chromium-browser
+exec /usr/bin/chromium-browser --profile-directory=Default --app-id=knailkjkjcfegledhjhcfacdngnicimb
+exec /usr/bin/spotify
 ################################################################
